@@ -344,6 +344,20 @@ function initFeedbackPopup() {
         }
     });
 
+    fullnameInput.addEventListener("input", function () {
+        fullnameInput.value = fullnameInput.value.replace(
+            /[^A-Za-zА-Яа-яЁё\s\-]/g,
+            ""
+        );
+    });
+
+    phoneInput.addEventListener("input", function () {
+        phoneInput.value = phoneInput.value.replace(
+            /[^0-9+\s\-()]/g,
+            ""
+        );
+    });
+
     form.addEventListener("input", function () {
         saveFormData();
     });

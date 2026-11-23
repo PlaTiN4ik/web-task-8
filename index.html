@@ -387,8 +387,7 @@
                 </button>
             </div>
 
-            <!-- Замените YOUR_FORM_ID на ваш реальный ID формы из formcarry.com или slapform.com -->
-            <form id="popup-feedback-form" action="https://formcarry.com/s/YOUR_FORM_ID" method="post">
+            <form id="popup-feedback-form" action="https://formcarry.com/s/qy7ilApOrAj" method="post">
                 <div class="popup-field">
                     <label for="popup-fullname" class="popup-label font-weight-bold">ФИО:</label>
                     <input
@@ -397,6 +396,9 @@
                         id="popup-fullname"
                         name="fullname"
                         placeholder="Иванов Иван Иванович"
+                        pattern="[A-Za-zА-Яа-яЁё\s\-]+"
+                        title="Разрешены только буквы, пробелы и дефис"
+                        inputmode="text"
                         required
                     >
                 </div>
@@ -421,6 +423,9 @@
                         id="popup-phone"
                         name="phone"
                         placeholder="+7 (999) 000-00-00"
+                        pattern="[+0-9\s\-\(\)]+"
+                        title="Разрешены только цифры и знаки +, -, скобки"
+                        inputmode="tel"
                         required
                     >
                 </div>
